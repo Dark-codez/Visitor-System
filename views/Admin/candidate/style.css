@@ -1,0 +1,122 @@
+:root{
+	--color: #103;
+	--direction: center;
+	--distance: 15;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: hsl(130,20%,10%);
+	font-size: clamp(19px,1.7vw,22px);
+	font-family: sans-serif;
+	background: #eee;
+	padding: 2rem;
+	gap: 10px;
+}
+.box{
+	padding: 30px 30px 50px;
+	width: min(100%,600px);
+	box-shadow: 1px 1px 2px rgba(0,0,0,.1),
+				-1px -1px 2px rgba(55,55,55,.3);	
+	background: radial-gradient(#fffa, transparent 90%) top left / 200% 200%;
+}
+.box:focus-within h2{
+	letter-spacing: .1em;
+}
+hr{
+	border: 1px solid #fff;
+}
+legend{
+	text-align: var(--direction);
+	padding: 0 calc(1px * var(--distance));
+	font-size: 1.5rem;
+	letter-spacing: .04em;
+	color: var(--color);
+}
+fieldset{
+	border: none;
+	border-top: 1px solid var(--color);
+	padding: 10px 0;
+}
+hr{
+	display: block;
+	margin: 0 0 2rem;
+	border-color: var(--color);
+}
+.box form div{
+	margin: 0 0 2rem 0;
+}
+h2{
+	color: var(--color);
+	padding: 0 0 25px;
+	text-align: center;
+	text-decoration: underline;
+	transition: all .1s;
+}
+.box form div label{
+	display: block;
+	padding: 0 0 8px;
+	color: var(--color);
+	letter-spacing: .04em;
+}
+.box form div input:not(.gender){
+	width: 100%;
+	padding: 15px;
+	letter-spacing: .08em;
+	color: #000;
+	outline: none;
+	border: none;
+	background: none;
+	font-size: 1rem;
+	font-weight: bold;
+	box-shadow: inset 1px 1px 2px rgba(0,0,0,.4),
+				inset -1px -1px 2px rgba(55,55,55,.3);	
+}
+.box form div input::placeholder{
+	color: var(--color);
+	opacity: .6;
+	letter-spacing: .04em;
+}
+button{
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 15px;
+	font-size: 1.1rem;
+	letter-spacing: .1em;
+	margin-top: 3%;
+	transition: all .1s;
+	color: #fff;
+	background: none;
+	color: var(--color);
+	box-shadow: 1px 1px 2px rgba(0,0,0,.6),
+				-1px -1px 2px rgba(55,55,55,.7);	
+	color: #fff;
+	background: #101;
+}
+button:active{
+	transform: scale(.9);
+}
+select{
+	width: 100%;
+	font-size: 1rem;
+	font-weight: bold;
+	box-shadow: inset 1px 1px 2px rgba(0,0,0,.4),
+				inset -1px -1px 2px rgba(55,55,55,.3);	
+	outline: none;
+	border: none;
+	background: none;
+	padding: 15px;
+}
